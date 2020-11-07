@@ -42,10 +42,21 @@ async def predict(item: Item):
     - src: string
     - date: string
 
+    ### Request Body REAL
+    - location: string
+    - tag1: string
+    - tag2: string
+    - tag3: string
+    - tag4: string
+    - tag5: string
+
     ### Response
     - `prediction`: boolean, at random
     - `predict_proba`: float between 0.5 and 1.0, 
     representing the predicted class's probability
+
+    ### Response REAL
+    - severity: int
 
     """
 
