@@ -17,9 +17,9 @@ from datetime import datetime
 from dotenv import load_dotenv
 # Use try/except to catch a pathway error that occurs differently between local environment and deployment
 try: # For deployment
-    from app.api import getdata, predict#, viz  # These were not used in our product. Comment back in if/when used
+    from app.api import getdata, predict, getcount#, viz  # These were not used in our product. Comment back in if/when used
 except: # For local environment
-    from api import getdata, predict#, viz  # These were not used in our product. Comment back in if/when used
+    from api import getdata, predict, getcount#, viz  # These were not used in our product. Comment back in if/when used
 
 # set up various things to be loaded outside of the function
 # pathway for geolocation data set up[]
@@ -66,7 +66,7 @@ load_dotenv()
 
 ### Rename the following to modify the name/description/etc seen on the FastAPI documentation page 
 app = FastAPI(
-    title='Labs 27 Human Rights First-C DS API',
+    title='Labs 28 Human Rights First-F DS API',
     description='Returns incident data from a pool of datasets run through a machine learning model.',
     version='0.5',
     docs_url='/',
@@ -76,6 +76,8 @@ app = FastAPI(
 app.include_router(predict.router)  # Not used by labs 27 but left in for future reference/use
 # app.include_router(viz.router)  # Not used by labs 27 but left in for future reference/use
 app.include_router(getdata.router)
+
+app.include_router(getcount.router)
 
 # The following is run upon app startup
 """This was not thoroughly explored or used by labs 27 as our focus was on getting accurate data cleaned,
