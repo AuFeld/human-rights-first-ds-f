@@ -6,11 +6,12 @@ from ast import literal_eval
 import os
 import json
 import ast
+import app.api.getcounthelper as gch
 
 router = APIRouter()
 
-@router.get('/getdata')
-async def getdata():
+@router.get('/getcount')
+async def getcount():
     '''
     Get jsonified dataset from all_sources_geoed.csv
     '''
@@ -20,22 +21,20 @@ async def getdata():
         __file__), '..', '..', 'all_sources_geoed.csv')
 
     df = pd.read_csv(locs_path)
-    # Fix issue where "Unnamed: 0" created when reading in the dataframe
-    df = df.drop(columns="Unnamed: 0")
+    # Got rid of unnecessary columns
+    columns = ["Unnamed: 0", "src", "state", "city", "desc", "geolocation", "title", "date", "date_text", "id", "lat", "long"]
+    df = df.drop(columns=columns)
 
-    # Removes the string type output from columns src and tags, leaving them as arrays for easier use by backend
+    # Removes the string type output from columns tags
     for i in range(len(df)):
-        df['src'][i] = ast.literal_eval(df['src'][i])
         df['tags'][i] = ast.literal_eval(df['tags'][i])
-
+    
+    force = gch.helper(df)
 
     """
     Convert data to useable json format
     ### Response
     dateframe: JSON object
     """
-    # Initial conversion to json - use records to jsonify by instances (rows)
-    result = df.to_json(orient="records")
-    # Parse the jsonified data removing instances of '\"' making it difficult for backend to collect the data
-    parsed = json.loads(result.replace('\"', '"'))
-    return parsed
+    app_json = json.dumps(force)
+    return app_json
