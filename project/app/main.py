@@ -16,10 +16,7 @@ from collections import Counter
 from datetime import datetime
 from dotenv import load_dotenv
 # Use try/except to catch a pathway error that occurs differently between local environment and deployment
-try: # For deployment
-    from app.api import getdata, predict, getcount, get_timeline#, viz  # These were not used in our product. Comment back in if/when used
-except: # For local environment
-    from api import getdata, predict, getcount, get_timeline#, viz  # These were not used in our product. Comment back in if/when used
+from app.api import getdata, predict, getcount, get_timeline#, viz  # These were not used in our product. Comment back in if/when used
 
 # set up various things to be loaded outside of the function
 # pathway for geolocation data set up[]
