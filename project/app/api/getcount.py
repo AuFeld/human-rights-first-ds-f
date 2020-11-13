@@ -36,5 +36,4 @@ async def getcount():
     ### Response
     dateframe: JSON object
     """
-    app_json = json.dumps(force)
-    return app_json
+    return json.loads(force.to_json(orient="table"))
