@@ -17,9 +17,9 @@ from datetime import datetime
 from dotenv import load_dotenv
 # Use try/except to catch a pathway error that occurs differently between local environment and deployment
 try: # For deployment
-    from app.api import getdata, predict, getcount#, viz  # These were not used in our product. Comment back in if/when used
+    from app.api import getdata, predict, getcount, get_timeline#, viz  # These were not used in our product. Comment back in if/when used
 except: # For local environment
-    from api import getdata, predict, getcount#, viz  # These were not used in our product. Comment back in if/when used
+    from api import getdata, predict, getcount, get_timeline#, viz  # These were not used in our product. Comment back in if/when used
 
 # set up various things to be loaded outside of the function
 # pathway for geolocation data set up[]
@@ -78,6 +78,8 @@ app.include_router(predict.router)  # Not used by labs 27 but left in for future
 app.include_router(getdata.router)
 
 app.include_router(getcount.router)
+
+app.include_router(get_timeline.router)
 
 # The following is run upon app startup
 """This was not thoroughly explored or used by labs 27 as our focus was on getting accurate data cleaned,
