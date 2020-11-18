@@ -1,7 +1,7 @@
 
 # Human Rights First Police Use of Force Map
 
-You can find the deployed project at [Human Rights First Police Brutality](https://main.d17v0exvwwwzgz.amplifyapp.com/).
+You can find the deployed project at [Human Rights First](https://main.d17v0exvwwwzgz.amplifyapp.com/).
 
 ## Contributors
 
