@@ -1,12 +1,8 @@
 
 # Human Rights First DS F
 
-<<<<<<< Updated upstream
-You can find the deployed project at [Human Rights First](https://main.d17v0exvwwwzgz.amplifyapp.com/).
-=======
 ## Description
 Human Rights First is a non-profit organization that challenges the United States to respect its ideals. There goal with this project is to have relevant data shown for all users to see. The problem our team is trying to solve is how to transform the relevant data that was pulled from social media into visualizations that will assistant in aiding user's understanding of the current situation. The final solution to the problem was developed graphs of the United States where incidents were separated by location and another by month.
->>>>>>> Stashed changes
 
 ## Contributors
 
