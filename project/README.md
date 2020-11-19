@@ -25,3 +25,5 @@ This directory contains all files directly important to the final product includ
 *• set_data_lat_long.py* —— File used to locally clean up some of the data in the "latest_injcidents.csv" and "all_sources.csv" files.
 
 *• app* —— Directory containing all of the directories and files directly used in creating the DS app and API. 
+
+*• timeline_tags.csv* —— csv file containing cleaned up data from the all_sources.csv file. This is the final dataset created by the labs 28 team and used for the get_timeline.py api endpoint.
