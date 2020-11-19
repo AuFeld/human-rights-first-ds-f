@@ -1,7 +1,12 @@
 
-# Human Rights First Police Use of Force Map
+# Human Rights First DS F
 
-You can find the deployed project at [Human Rights First Police Brutality](https://main.d17v0exvwwwzgz.amplifyapp.com/).
+<<<<<<< Updated upstream
+You can find the deployed project at [Human Rights First](https://main.d17v0exvwwwzgz.amplifyapp.com/).
+=======
+## Description
+Human Rights First is a non-profit organization that challenges the United States to respect its ideals. There goal with this project is to have relevant data shown for all users to see. The problem our team is trying to solve is how to transform the relevant data that was pulled from social media into visualizations that will assistant in aiding user's understanding of the current situation. The final solution to the problem was developed graphs of the United States where incidents were separated by location and another by month.
+>>>>>>> Stashed changes
 
 ## Contributors
 
@@ -38,11 +43,14 @@ You can find the deployed project at [Human Rights First Police Brutality](https
 ![fastapi-utils](https://img.shields.io/badge/fastapi--utils-0.2.1-informational)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-11.3.20-yellowgreen)
 
+## Deployed Product
+You can find the deployed project at [Frontend Website](https://f.humanrightsfirst.dev/), [Backend API](https://hrf-f-api.herokuapp.com/api-docs/), [Data Science API](http://human-rights-first-api.eba-rb7uzmhr.us-east-1.elasticbeanstalk.com/).
+
 ## Project Overview
 
-[Trello Board](https://trello.com/b/QWXanExQ/team-c-2009)
+[Trello Board](https://trello.com/b/m8DS3TMn/team-f-labs28)
 
-[Product Canvas](https://whimsical.com/8sQcpjw3K2XdAiM9aeMkft)
+[Product Canvas](https://whimsical.com/LshE6Bmrgq9Vb4nFoLMGwz)
 
 Our team is developing an interactive map that identifies potential instances of police use of force across the United States of America for Human Rights First, an independent advocacy and action organization.
 
@@ -82,13 +90,9 @@ We're pulling data from similiar APIs(All locations V2 - https://raw.githubuserc
 
 #### Data Science API deployed to AWS
 
-#### [Back end](https://github.com/Lambda-School-Labs/Labs27-C-HRF-BE/blob/main/README.md) built using:
+#### [Back end](https://github.com/Lambda-School-Labs/human-rights-first-be-f)
 
--
-
-#### [Front end](https://github.com/Lambda-School-Labs/Labs27-C-HRF-FE) built using:
-
--
+#### [Front end](https://github.com/Lambda-School-Labs/human-rights-first-fe-f)
 
 # APIs
 
@@ -199,4 +203,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](https://github.com/Lambda-School-Labs/Labs27-C-HRF-BE/blob/main/README.md) for details on the backend of our project.
+See [Backend Documentation](https://github.com/Lambda-School-Labs/human-rights-first-be-f/blob/main/README.md) for details on the backend of our project.
